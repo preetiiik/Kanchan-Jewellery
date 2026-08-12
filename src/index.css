@@ -1,0 +1,251 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'Deco Edition JNL';
+  src: url('./assets/fonts/DecoEditionJNL.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Makozin';
+  src: url('./assets/fonts/Makozin-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Makozin';
+  src: url('./assets/fonts/Makozin-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Makozin';
+  src: url('./assets/fonts/Makozin-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Makozin';
+  src: url('./assets/fonts/Makozin-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Makozin';
+  src: url('./assets/fonts/Makozin-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@theme {
+  --font-display: 'Deco Edition JNL', Georgia, serif;
+  --font-body: 'Makozin', system-ui, sans-serif;
+  --color-ivory: #FAF8F4;
+  --color-cream: #F0E8DC;
+  --color-champagne: #E5D5C0;
+  --color-charcoal: #1C1814;
+  --color-ink: #0F0D0B;
+  --color-gold: #B39656;
+  --color-gold-light: #CDB87A;
+  --color-muted: #9A8C7E;
+  --color-border: #DDD0C0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: #FAF8F4;
+  color: #1C1814;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom cursor — desktop only */
+@media (hover: hover) and (pointer: fine) {
+  body {
+    cursor: none;
+  }
+  * {
+    cursor: none !important;
+  }
+}
+
+.cursor-dot {
+  width: 10px;
+  height: 10px;
+  background: #1C1814;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate3d(-100px, -100px, 0) translate(-50%, -50%);
+  transition: width 0.25s ease, height 0.25s ease, background 0.25s ease;
+  will-change: transform;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.cursor-ring {
+  display: none;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(28, 24, 20, 0.4);
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate3d(-100px, -100px, 0) translate(-50%, -50%);
+  transition: width 0.35s ease, height 0.35s ease, border-color 0.35s ease;
+  will-change: transform;
+}
+
+.cursor-label {
+  display: none;
+  font-family: var(--font-body);
+  font-size: 8px;
+  letter-spacing: 0.12em;
+  color: #FAF8F4;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .cursor-dot { display: flex; }
+  .cursor-ring { display: flex; align-items: center; justify-content: center; }
+  .cursor-label { display: block; }
+}
+
+.cursor-dot.hovering {
+  width: 64px;
+  height: 64px;
+  background: rgba(28, 24, 20, 0.88);
+}
+
+.cursor-dot.hovering .cursor-label {
+  opacity: 1;
+}
+
+.cursor-ring.hovering {
+  width: 0;
+  height: 0;
+  border-color: transparent;
+}
+
+/* Scroll reveal animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1), transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-slow {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1.1s cubic-bezier(0.22, 1, 0.36, 1) 0.15s, transform 1.1s cubic-bezier(0.22, 1, 0.36, 1) 0.15s;
+}
+
+.reveal-slow.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1), transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-left.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1), transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-right.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Gold accent line */
+.gold-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, #B39656 40%, #CDB87A 60%, transparent 100%);
+}
+
+.gold-line-v {
+  width: 1px;
+  background: linear-gradient(180deg, transparent 0%, #B39656 50%, transparent 100%);
+}
+
+/* Image hover scale */
+.img-zoom {
+  overflow: hidden;
+}
+
+.img-zoom img {
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.img-zoom:hover img {
+  transform: scale(1.05);
+}
+
+/* Hide scrollbars while scrolling feels native */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #DDD0C0;
+  border-radius: 2px;
+}
+
+/* Text selection */
+::selection {
+  background: #B39656;
+  color: #FAF8F4;
+}

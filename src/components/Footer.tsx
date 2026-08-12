@@ -1,0 +1,204 @@
+import { memo } from 'react'
+
+const navLinks = [
+  { group: 'Navigate', items: ['Collections', 'About', 'Craftsmanship', 'Contact'] },
+  { group: 'Collections', items: ['Necklaces', 'Earrings', 'Bangles', 'New Arrivals'] },
+  { group: 'More', items: ['Care Guide', 'Custom Orders', 'Gift Cards', 'Store Visit'] },
+]
+
+function Footer() {
+  return (
+    <footer
+      style={{
+        background: '#0F0D0B',
+        padding: 'clamp(3rem, 8vw, 6rem) clamp(1.5rem, 6vw, 6rem) 2rem',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '3.5rem',
+      }}
+    >
+      {/* Top: brand + nav */}
+      <div
+        className="footer-top-grid"
+        style={{
+          display: 'grid',
+          gridTemplateColumns: '2fr 1fr 1fr 1fr',
+          gap: 'clamp(2rem, 4vw, 4rem)',
+          flexWrap: 'wrap',
+        }}
+      >
+        {/* Brand */}
+        <div className="footer-brand" style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+          <div>
+            <p
+              style={{
+                fontFamily: 'var(--font-display)',
+                fontWeight: 300,
+                fontSize: 'clamp(1.4rem, 3vw, 2.2rem)',
+                color: '#B39656',
+                margin: '0 0 4px 0',
+                letterSpacing: '0.08em',
+              }}
+            >
+              KÄNCHAN
+            </p>
+            <p
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: '8px',
+                letterSpacing: '0.28em',
+                textTransform: 'uppercase',
+                color: 'rgba(250, 248, 244, 0.35)',
+                margin: 0,
+              }}
+            >
+              By Manjula Jewellers
+            </p>
+          </div>
+
+          <div style={{ height: '1px', width: '40px', background: 'rgba(179, 150, 86, 0.4)' }} />
+
+          <p
+            style={{
+              fontFamily: 'var(--font-body)',
+              fontSize: '10px',
+              letterSpacing: '0.18em',
+              textTransform: 'uppercase',
+              color: 'rgba(250, 248, 244, 0.4)',
+              margin: 0,
+              lineHeight: 1.6,
+            }}
+          >
+            Jewels Crafted
+            <br />
+            For Generations
+          </p>
+
+          <p
+            style={{
+              fontFamily: 'var(--font-body)',
+              fontSize: '11px',
+              lineHeight: 1.7,
+              color: 'rgba(250, 248, 244, 0.28)',
+              margin: 0,
+              maxWidth: '240px',
+              fontWeight: 300,
+            }}
+          >
+            Necklaces · Earrings · Bangles
+          </p>
+        </div>
+
+        {/* Nav columns */}
+        {navLinks.map((group) => (
+          <div key={group.group} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            <p
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: '9px',
+                letterSpacing: '0.2em',
+                textTransform: 'uppercase',
+                color: '#B39656',
+                margin: '0 0 0.5rem 0',
+              }}
+            >
+              {group.group}
+            </p>
+            {group.items.map((item) => (
+              <a
+                key={item}
+                href="#"
+                style={{
+                  fontFamily: 'var(--font-body)',
+                  fontSize: '12px',
+                  color: 'rgba(250, 248, 244, 0.45)',
+                  textDecoration: 'none',
+                  letterSpacing: '0.04em',
+                  transition: 'color 0.3s ease',
+                }}
+                onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = 'rgba(250, 248, 244, 0.85)')}
+                onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = 'rgba(250, 248, 244, 0.45)')}
+              >
+                {item}
+              </a>
+            ))}
+          </div>
+        ))}
+      </div>
+
+      {/* Divider */}
+      <div style={{ height: '1px', background: 'rgba(179, 150, 86, 0.15)' }} />
+
+      {/* Bottom */}
+      <div
+        className="footer-bottom-row"
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          flexWrap: 'wrap',
+          gap: '1rem',
+        }}
+      >
+        <p
+          style={{
+            fontFamily: 'var(--font-body)',
+            fontSize: '10px',
+            color: 'rgba(250, 248, 244, 0.25)',
+            margin: 0,
+            letterSpacing: '0.06em',
+          }}
+        >
+          © {new Date().getFullYear()} Kanchan Jewellery. All rights reserved.
+        </p>
+        <div style={{ display: 'flex', gap: '1.5rem' }}>
+          {['Instagram', 'Facebook', 'Pinterest'].map((social) => (
+            <a
+              key={social}
+              href="#"
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: '9px',
+                letterSpacing: '0.15em',
+                textTransform: 'uppercase',
+                color: 'rgba(250, 248, 244, 0.25)',
+                textDecoration: 'none',
+                transition: 'color 0.3s ease',
+              }}
+              onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = '#B39656')}
+              onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = 'rgba(250, 248, 244, 0.25)')}
+            >
+              {social}
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <style>{`
+        @media (max-width: 767px) {
+          .footer-top-grid {
+            grid-template-columns: 1fr 1fr !important;
+          }
+          .footer-brand {
+            grid-column: 1 / -1 !important;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .footer-top-grid {
+            grid-template-columns: 1fr !important;
+            gap: 2.5rem !important;
+          }
+
+          .footer-bottom-row {
+            flex-direction: column;
+            align-items: flex-start !important;
+            gap: 1.25rem !important;
+          }
+        }
+      `}</style>
+    </footer>
+  )
+}
+
+export default memo(Footer)
