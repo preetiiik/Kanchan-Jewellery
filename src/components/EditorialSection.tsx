@@ -229,7 +229,7 @@ function EditorialSection() {
           <p
             style={{
               fontFamily: 'var(--font-body)',
-              fontSize: '10px',
+              fontSize: '16px',
               letterSpacing: '0.22em',
               textTransform: 'uppercase',
               color: '#B39656',
@@ -277,7 +277,7 @@ function EditorialSection() {
           <p
             style={{
               fontFamily: 'var(--font-body)',
-              fontSize: '12px',
+              fontSize: '17px',
               lineHeight: 1.9,
               color: 'rgba(250, 248, 244, 0.45)',
               maxWidth: '300px',
@@ -296,7 +296,7 @@ function EditorialSection() {
               alignItems: 'center',
               gap: '1rem',
               fontFamily: 'var(--font-body)',
-              fontSize: '10px',
+              fontSize: '16px',
               letterSpacing: '0.2em',
               textTransform: 'uppercase',
               color: '#B39656',

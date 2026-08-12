@@ -1,10 +1,15 @@
 {
+ "title": "Kanchan Jewellery",
   "description": "Create stunning websites effortlessly by converting text into beautifully designed web pages, perfect for businesses and individuals looking to establish an online presence.",
   "robots": {
     "index": false
+  },
+  "icons": {
+    "icon": "/kanchan-logo-white.png"
   },
   "accessibility": {
     "addBypassLinks": false,
     "ignoreReducedMotion": false
   }
+  
 }

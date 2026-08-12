@@ -42,6 +42,7 @@ function Categories({
       style={{
         background: '#FAF8F4',
         padding: 'clamp(4rem, 10vw, 8rem) clamp(1.5rem, 6vw, 6rem)',
+        paddingBottom: 0,
       }}
     >
       {/* Section header */}
@@ -53,7 +54,7 @@ function Categories({
         <p
           style={{
             fontFamily: 'var(--font-body)',
-            fontSize: '10px',
+            fontSize: '16px',
             letterSpacing: '0.22em',
             textTransform: 'uppercase',
             color: '#B39656',
@@ -171,7 +172,7 @@ function CategoryCard({
           <p
             style={{
               fontFamily: 'var(--font-body)',
-              fontSize: '9px',
+              fontSize: '17px',
               letterSpacing: '0.2em',
               textTransform: 'uppercase',
               color: '#B39656',
@@ -197,7 +198,7 @@ function CategoryCard({
           href="#CollectionShowcase"
           style={{
             fontFamily: 'var(--font-body)',
-            fontSize: '9px',
+            fontSize: '17px',
             letterSpacing: '0.18em',
             textTransform: 'uppercase',
             color: '#9A8C7E',

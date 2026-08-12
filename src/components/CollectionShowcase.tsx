@@ -102,7 +102,7 @@ function CollectionShowcase({
             <p
               style={{
                 fontFamily: 'var(--font-body)',
-                fontSize: '10px',
+                fontSize: '16px',
                 letterSpacing: '0.22em',
                 textTransform: 'uppercase',
                 color: '#B39656',
@@ -115,7 +115,7 @@ function CollectionShowcase({
             <h2
               style={{
                 fontFamily: 'var(--font-display)',
-                fontWeight: 300,
+                fontWeight: 500,
                 fontSize: 'clamp(2rem, 5vw, 4rem)',
                 color: '#1C1814',
                 margin: 0,
@@ -138,7 +138,7 @@ function CollectionShowcase({
                 className="showcase-tab-btn"
                 style={{
                   fontFamily: 'var(--font-body)',
-                  fontSize: '10px',
+                  fontSize: '16px',
                   letterSpacing: '0.18em',
                   textTransform: 'uppercase',
                   color: activeTab === tab ? '#1C1814' : '#9A8C7E',
@@ -254,7 +254,7 @@ function CollectionShowcase({
 
           .showcase-tab-btn {
             padding: 0.5rem 1rem !important;
-            font-size: 9px !important;
+            font-size: 13px !important;
           }
         }
 

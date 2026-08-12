@@ -91,7 +91,7 @@ function FeaturedProducts({
           <p
             style={{
               fontFamily: 'var(--font-body)',
-              fontSize: '10px',
+              fontSize: '16px',
               letterSpacing: '0.22em',
               textTransform: 'uppercase',
               color: '#B39656',
@@ -120,7 +120,8 @@ function FeaturedProducts({
           href="#CollectionShowcase"
           style={{
             fontFamily: 'var(--font-body)',
-            fontSize: '10px',
+            fontSize: '16px',
+            fontWeight: 500,
             letterSpacing: '0.18em',
             textTransform: 'uppercase',
             color: '#9A8C7E',
@@ -220,7 +221,7 @@ function ProductCard({
             top: '12px',
             left: '14px',
             fontFamily: 'var(--font-body)',
-            fontSize: '10px',
+            fontSize: '16px',
             letterSpacing: '0.12em',
             color: 'rgba(250, 248, 244, 0.7)',
           }}
@@ -234,7 +235,7 @@ function ProductCard({
           <p
             style={{
               fontFamily: 'var(--font-body)',
-              fontSize: '9px',
+              fontSize: '16px',
               letterSpacing: '0.15em',
               textTransform: 'uppercase',
               color: '#B39656',
@@ -246,8 +247,8 @@ function ProductCard({
           <p
             style={{
               fontFamily: 'var(--font-display)',
-              fontSize: '1rem',
-              fontWeight: 300,
+              fontSize: '16px',
+              fontWeight: 500,
               color: '#1C1814',
               margin: 0,
             }}
@@ -259,7 +260,7 @@ function ProductCard({
           href="#"
           style={{
             fontFamily: 'var(--font-body)',
-            fontSize: '9px',
+            fontSize: '16px',
             letterSpacing: '0.15em',
             textTransform: 'uppercase',
             color: '#9A8C7E',

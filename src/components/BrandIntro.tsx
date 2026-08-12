@@ -12,19 +12,19 @@ export default function BrandIntro() {
           font-family: var(--font-body);
         }
 
-        .ka-content-label {
-          font-family: var(--font-body);
-          font-weight: 300;
-          font-size: 9px;
-          letter-spacing: 0.34em;
-          text-transform: uppercase;
-          color: rgba(179,150,86,0.85);
-          margin: 0 0 1.4rem;
-        }
+        // .ka-content-label {
+        //   font-family: var(--font-body);
+        //   font-weight: 500;
+        //   font-size: 12px;
+        //   letter-spacing: 0.34em;
+        //   text-transform: uppercase;
+        //   color: rgba(179,150,86,0.85);
+        //   margin: 0 0 1.4rem;
+        // }
 
         .ka-content-heading {
           font-family: var(--font-display);
-          font-weight: 200;
+          font-weight: 500;
           font-size: clamp(3rem, 6vw, 6.5rem);
           line-height: 0.92;
           color: #F0E8DC;
@@ -50,8 +50,8 @@ export default function BrandIntro() {
 
         .ka-content-body {
           font-family: var(--font-body);
-          font-weight: 300;
-          font-size: clamp(12px, 1.1vw, 14px);
+          font-weight: 500;
+          font-size: clamp(12px, 1.1vw, 16px);
           line-height: 2;
           color: rgba(240,232,220,0.72);
           text-align: center;
@@ -63,7 +63,7 @@ export default function BrandIntro() {
       `}</style>
 
       <section
-        id="ka-about"
+        id="BrandIntro"
         style={{
           background: '#F0E8DC',
           scrollMarginTop: '92px',
@@ -88,9 +88,9 @@ export default function BrandIntro() {
         >
           {/* Content revealed as frame opens */}
 
-          <p className="ka-content-label">
+          {/* <p className="ka-content-label">
             The House of Kanchan
-          </p>
+          </p> */}
 
           <h2 className="ka-content-heading">
             Our

@@ -114,7 +114,7 @@ function Hero({
           className="hero-in"
           style={{
             fontFamily: 'var(--font-body)',
-            fontSize: '10px',
+            fontSize: '16px',
             letterSpacing: '0.22em',
             textTransform: 'uppercase',
             color: '#C9AD70',
@@ -149,7 +149,7 @@ function Hero({
             fontSize: 'clamp(13px, 1.4vw, 15px)',
             lineHeight: 1.85,
             color: '#E4DCD2',
-            maxWidth: '490px',
+            maxWidth: '470px',
             margin: 0,
             fontWeight: 300,
             animationDelay: '0.32s',
@@ -169,7 +169,7 @@ function Hero({
             className="hero-cta"
             style={{
               fontFamily: 'var(--font-body)',
-              fontSize: '10px',
+              fontSize: '16px',
               letterSpacing: '0.2em',
               textTransform: 'uppercase',
               color: '#1C1814',

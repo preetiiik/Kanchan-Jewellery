@@ -79,7 +79,8 @@ export default function ScrollExpand({
       const targetH     = lerp(startHeight, 100,          p)
       const targetR     = lerp(startRadius, endRadius,    p)
       const targetScrim = overlayScrim * p
-      const targetTitle = Math.max(0, 1 - p * 5)
+      const titleHidden = raw > 0.002
+      const targetTitle = titleHidden ? 0 : 1
       const targetCont  = Math.max(0, (p - 0.65) / 0.35)   // fade in last 35% of travel
 
       const c = cur.current
@@ -100,8 +101,10 @@ export default function ScrollExpand({
       if (imgRef.current)
         imgRef.current.style.transform = `scale(${imgScale})`
 
-      if (titleRef.current)
+      if (titleRef.current) {
         titleRef.current.style.opacity = String(targetTitle)
+        titleRef.current.style.visibility = titleHidden ? 'hidden' : 'visible'
+      }
 
       if (scrimRef.current)
         scrimRef.current.style.opacity = String(c.scrim)
@@ -153,7 +156,7 @@ export default function ScrollExpand({
             transform: 'translateX(-50%)',
             margin: 0,
             fontFamily: 'inherit',
-            fontSize: '10px',
+            fontSize: '18px',
             letterSpacing: '0.28em',
             textTransform: 'uppercase',
             color: '#B39656',
@@ -236,7 +239,7 @@ export default function ScrollExpand({
               transform: 'translateX(-50%)',
               margin: 0,
               fontFamily: 'inherit',
-              fontSize: '9px',
+              fontSize: '17px',
               letterSpacing: '0.28em',
               textTransform: 'uppercase',
               color: 'rgba(110,96,88,0.6)',

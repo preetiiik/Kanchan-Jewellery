@@ -1,12 +1,44 @@
-import { memo } from 'react'
+import { memo, useState } from 'react'
+import PrivacyPolicy from './PrivacyPolicy'
 
 const navLinks = [
-  { group: 'Navigate', items: ['Collections', 'About', 'Craftsmanship', 'Contact'] },
-  { group: 'Collections', items: ['Necklaces', 'Earrings', 'Bangles', 'New Arrivals'] },
-  { group: 'More', items: ['Care Guide', 'Custom Orders', 'Gift Cards', 'Store Visit'] },
+  {
+    group: 'Navigate',
+    items: [
+      { label: 'Collections', href: '#collections' },
+      { label: 'About', href: '#brandintro' },
+      { label: 'Craftsmanship', href: '#craftsmanship' },
+      { label: 'Contact', href: '#contact' },
+    ],
+  },
+  {
+    group: 'Collections',
+    items: [
+      { label: 'Necklaces', href: '#collections' },
+      { label: 'Earrings', href: '#collections' },
+      { label: 'Bangles', href: '#collections' },
+      { label: 'New Arrivals', href: '#collections' },
+    ],
+  },
+  {
+    group: 'More',
+    items: [
+      { label: 'Care Guide', href: '#care-guide' },
+      { label: 'Custom Orders', href: '#contact' },
+      { label: 'Gift Cards', href: '#contact' },
+      { label: 'Store Visit', href: '#contact' },
+    ],
+  },
+]
+
+const socialLinks = [
+  { label: 'Instagram', href: 'https://www.instagram.com/kanchan.bymanjulajewellers/' },
+  { label: 'WhatsApp', href: 'https://wa.me/919999999999' },
 ]
 
 function Footer() {
+  const [privacyOpen, setPrivacyOpen] = useState(false)
+
   return (
     <footer
       style={{
@@ -45,7 +77,7 @@ function Footer() {
             <p
               style={{
                 fontFamily: 'var(--font-body)',
-                fontSize: '8px',
+                fontSize: '14px',
                 letterSpacing: '0.28em',
                 textTransform: 'uppercase',
                 color: 'rgba(250, 248, 244, 0.35)',
@@ -61,7 +93,7 @@ function Footer() {
           <p
             style={{
               fontFamily: 'var(--font-body)',
-              fontSize: '10px',
+              fontSize: '16px',
               letterSpacing: '0.18em',
               textTransform: 'uppercase',
               color: 'rgba(250, 248, 244, 0.4)',
@@ -77,7 +109,7 @@ function Footer() {
           <p
             style={{
               fontFamily: 'var(--font-body)',
-              fontSize: '11px',
+              fontSize: '14px',
               lineHeight: 1.7,
               color: 'rgba(250, 248, 244, 0.28)',
               margin: 0,
@@ -95,7 +127,7 @@ function Footer() {
             <p
               style={{
                 fontFamily: 'var(--font-body)',
-                fontSize: '9px',
+                fontSize: '17px',
                 letterSpacing: '0.2em',
                 textTransform: 'uppercase',
                 color: '#B39656',
@@ -106,11 +138,11 @@ function Footer() {
             </p>
             {group.items.map((item) => (
               <a
-                key={item}
-                href="#"
+                key={item.label}
+                href={item.href}
                 style={{
                   fontFamily: 'var(--font-body)',
-                  fontSize: '12px',
+                  fontSize: '17px',
                   color: 'rgba(250, 248, 244, 0.45)',
                   textDecoration: 'none',
                   letterSpacing: '0.04em',
@@ -119,7 +151,7 @@ function Footer() {
                 onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = 'rgba(250, 248, 244, 0.85)')}
                 onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = 'rgba(250, 248, 244, 0.45)')}
               >
-                {item}
+                {item.label}
               </a>
             ))}
           </div>
@@ -140,25 +172,48 @@ function Footer() {
           gap: '1rem',
         }}
       >
-        <p
-          style={{
-            fontFamily: 'var(--font-body)',
-            fontSize: '10px',
-            color: 'rgba(250, 248, 244, 0.25)',
-            margin: 0,
-            letterSpacing: '0.06em',
-          }}
-        >
-          © {new Date().getFullYear()} Kanchan Jewellery. All rights reserved.
-        </p>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}>
+          <p
+            style={{
+              fontFamily: 'var(--font-body)',
+              fontSize: '16px',
+              color: 'rgba(250, 248, 244, 0.25)',
+              margin: 0,
+              letterSpacing: '0.06em',
+            }}
+          >
+            © {new Date().getFullYear()} Kanchan Jewellery. All rights reserved.
+          </p>
+          <span style={{ color: 'rgba(250, 248, 244, 0.15)', fontSize: '16px' }}>|</span>
+          <button
+            onClick={() => setPrivacyOpen(true)}
+            style={{
+              fontFamily: 'var(--font-body)',
+              fontSize: '16px',
+              letterSpacing: '0.06em',
+              color: 'rgba(250, 248, 244, 0.25)',
+              background: 'none',
+              border: 'none',
+              padding: 0,
+              cursor: 'pointer',
+              transition: 'color 0.3s ease',
+            }}
+            onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = '#B39656')}
+            onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = 'rgba(250, 248, 244, 0.25)')}
+          >
+            Privacy Policy
+          </button>
+        </div>
         <div style={{ display: 'flex', gap: '1.5rem' }}>
-          {['Instagram', 'Facebook', 'Pinterest'].map((social) => (
+          {socialLinks.map((social) => (
             <a
-              key={social}
-              href="#"
+              key={social.label}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
               style={{
                 fontFamily: 'var(--font-body)',
-                fontSize: '9px',
+                fontSize: '17px',
                 letterSpacing: '0.15em',
                 textTransform: 'uppercase',
                 color: 'rgba(250, 248, 244, 0.25)',
@@ -168,7 +223,7 @@ function Footer() {
               onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = '#B39656')}
               onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = 'rgba(250, 248, 244, 0.25)')}
             >
-              {social}
+              {social.label}
             </a>
           ))}
         </div>
@@ -197,6 +252,8 @@ function Footer() {
           }
         }
       `}</style>
+
+      {privacyOpen && <PrivacyPolicy onClose={() => setPrivacyOpen(false)} />}
     </footer>
   )
 }

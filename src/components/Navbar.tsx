@@ -6,7 +6,7 @@ const navLinks = ['Collections', 'About', 'Craftsmanship', 'Contact']
 
 const navHrefs: Record<string, string> = {
   Collections: '#collections',
-  About: '#about',
+  About: '#BrandIntro',
   Craftsmanship: '#craftsmanship',
   Contact: '#contact',
 }
@@ -59,7 +59,7 @@ export default function Navbar() {
               href={navHrefs[link]}
               style={{
                 fontFamily: 'var(--font-body)',
-                fontSize: '15px',
+                fontSize: '17px',
                 letterSpacing: '0.14em',
                 textTransform: 'uppercase',
                 color: textColor,
@@ -105,7 +105,7 @@ export default function Navbar() {
               href={navHrefs[link]}
               style={{
                 fontFamily: 'var(--font-body)',
-                fontSize: '15px',
+                fontSize: '17px',
                 letterSpacing: '0.14em',
                 textTransform: 'uppercase',
                 color: textColor,
@@ -217,6 +217,8 @@ export default function Navbar() {
         @media (max-width: 767px) {
           .site-header {
             justify-content: space-between !important;
+            padding-left: 1.5rem !important;
+            height: 148px !important;
           }
           .navbar-desktop-nav {
             display: none !important;
@@ -225,6 +227,11 @@ export default function Navbar() {
             flex: none !important;
             width: auto;
             justify-content: flex-start !important;
+            margin-left: -0.75rem;
+            margin-top: 0.4rem;
+          }
+          .navbar-logo img {
+            height: 88px !important;
           }
           .navbar-hamburger {
             display: flex !important;

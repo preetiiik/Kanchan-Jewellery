@@ -136,7 +136,7 @@ function BrandStory() {
             style={{
               margin: 0,
               fontFamily: 'var(--font-body)',
-              fontSize: '9px',
+              fontSize: '17px',
               letterSpacing: '0.25em',
               textTransform: 'uppercase',
               color: '#B39656',
@@ -149,7 +149,7 @@ function BrandStory() {
               width: '45px',
               height: '1px',
               background: '#B39656',
-              marginTop: '10px',
+              marginTop: '14px',
               marginRight: 'auto',
               opacity: 0.6,
             }}
@@ -303,7 +303,7 @@ function BrandStory() {
             writingMode: 'vertical-rl',
             transform: 'rotate(180deg)',
             fontFamily: 'var(--font-body)',
-            fontSize: '8px',
+            fontSize: '14px',
             letterSpacing: '0.3em',
             textTransform: 'uppercase',
             color: '#B39656',
@@ -336,7 +336,7 @@ function BrandStory() {
         <p
           style={{
             fontFamily: 'var(--font-body)',
-            fontSize: '10px',
+            fontSize: '16px',
             letterSpacing: '0.22em',
             textTransform: 'uppercase',
             color: '#B39656',
@@ -383,7 +383,7 @@ function BrandStory() {
         <p
           style={{
             fontFamily: 'var(--font-body)',
-            fontSize: '14px',
+            fontSize: '16px',
             lineHeight: 1.85,
             color: '#6E6058',
             margin: 0,
@@ -417,7 +417,7 @@ function BrandStory() {
               <p
                 style={{
                   fontFamily: 'var(--font-body)',
-                  fontSize: '10px',
+                  fontSize: '16px',
                   letterSpacing: '0.18em',
                   textTransform: 'uppercase',
                   color: '#B39656',
@@ -429,7 +429,7 @@ function BrandStory() {
               <p
                 style={{
                   fontFamily: 'var(--font-body)',
-                  fontSize: '13px',
+                  fontSize: '15px',
                   lineHeight: 1.7,
                   color: '#9A8C7E',
                   margin: 0,
@@ -656,7 +656,7 @@ function BrandStory() {
 
           .film-track {
             --arc-rx: 155px;
-            --arc-ry: 210px;
+            --arc-ry: 214px;
           }
         }
 

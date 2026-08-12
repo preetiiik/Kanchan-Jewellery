@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from 'react'
+import { useEffect, useRef, useCallback } from 'react'
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
 import BrandIntro from '@/components/BrandIntro'
@@ -11,7 +11,8 @@ import CTASection from '@/components/CTASection'
 import Footer from '@/components/Footer'
 
 export default function App() {
-  const [isHovering, setIsHovering] = useState(false)
+  // Cursor hover-to-'VIEW' effect has been disabled — this stays false permanently.
+  const isHovering = false
   const dotRef = useRef<HTMLDivElement>(null)
   const ringRef = useRef<HTMLDivElement>(null)
 
@@ -56,8 +57,11 @@ export default function App() {
     }
   }, [])
 
-  const handleImageHover = useCallback(() => setIsHovering(true), [])
-  const handleImageLeave = useCallback(() => setIsHovering(false), [])
+  // Image hover no longer changes the cursor — kept as no-ops so Hero,
+  // Categories, FeaturedProducts, and CollectionShowcase don't need their
+  // onImageHover/onImageLeave props removed.
+  const handleImageHover = useCallback(() => {}, [])
+  const handleImageLeave = useCallback(() => {}, [])
 
   return (
     <>
