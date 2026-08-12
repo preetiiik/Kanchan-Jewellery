@@ -25,7 +25,7 @@ export default function BrandIntro() {
         .ka-content-heading {
           font-family: var(--font-display);
           font-weight: 500;
-          font-size: clamp(3rem, 6vw, 6.5rem);
+          font-size: clamp(22px, 6vw, 6.5rem);
           line-height: 0.92;
           color: #F0E8DC;
           letter-spacing: -0.03em;
@@ -51,7 +51,7 @@ export default function BrandIntro() {
         .ka-content-body {
           font-family: var(--font-body);
           font-weight: 500;
-          font-size: clamp(12px, 1.1vw, 16px);
+          font-size: clamp(18px, 1.1vw, 16px);
           line-height: 2;
           color: rgba(240,232,220,0.72);
           text-align: center;
@@ -93,9 +93,8 @@ export default function BrandIntro() {
           </p> */}
 
           <h2 className="ka-content-heading">
-            Our
-            <br />
-            <em>Story</em>
+            <em>Our 
+            Story</em>
           </h2>
 
           <div className="ka-rule" />

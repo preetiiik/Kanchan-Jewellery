@@ -136,7 +136,7 @@ function BrandStory() {
             style={{
               margin: 0,
               fontFamily: 'var(--font-body)',
-              fontSize: '17px',
+              fontSize: '20px',
               letterSpacing: '0.25em',
               textTransform: 'uppercase',
               color: '#B39656',

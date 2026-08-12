@@ -11,39 +11,39 @@
 
 @font-face {
   font-family: 'Cormorant Garamond';
-  src: url('./assets/fonts/CormorantGaramond-Italic-VariableFont_wght.ttf') format('woff2');
+  src: url('./assets/fonts/Makozin-Regular.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-   font-family: 'Cormorant Garamond';
-  src: url('./assets/fonts/CormorantGaramond-Italic-VariableFont_wght.ttf') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-   font-family: 'Cormorant Garamond';
-  src: url('./assets/fonts/CormorantGaramond-Italic-VariableFont_wght.ttf') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Cormorant Garamond';
-  src: url('./assets/fonts/CormorantGaramond-Bold-VariableFont_wght.ttf') format('woff2');
+   font-family: 'Makozin';
+  src: url('./assets/fonts/Makozin-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Cormorant Garamond';
-  src: url('./assets/fonts/CormorantGaramond-Italic-VariableFont_wght.ttf') format('woff2');
+   font-family: 'Makozin';
+  src: url('./assets/fonts/Makozin-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Makozin';
+  src: url('./assets/fonts/Makozin-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Makozin';
+  src: url('./assets/fonts/Makozin-Bold.woff2') format('woff2');
   font-weight: 500;
   font-style: italic;
   font-display: swap;

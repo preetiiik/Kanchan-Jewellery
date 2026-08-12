@@ -114,7 +114,7 @@ function Hero({
           className="hero-in"
           style={{
             fontFamily: 'var(--font-body)',
-            fontSize: '16px',
+            fontSize: '20px',
             letterSpacing: '0.22em',
             textTransform: 'uppercase',
             color: '#C9AD70',
@@ -146,7 +146,7 @@ function Hero({
           className="hero-in"
           style={{
             fontFamily: 'var(--font-body)',
-            fontSize: 'clamp(13px, 1.4vw, 15px)',
+            fontSize: 'clamp(18px, 1.4vw, 15px)',
             lineHeight: 1.85,
             color: '#E4DCD2',
             maxWidth: '470px',
