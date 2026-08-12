@@ -33,7 +33,8 @@ const navLinks = [
 
 const socialLinks = [
   { label: 'Instagram', href: 'https://www.instagram.com/kanchan.bymanjulajewellers/' },
-  { label: 'WhatsApp', href: 'https://wa.me/919999999999' },
+  { label: 'Facebook', href: 'https://www.facebook.com/kanchanjewellerss/' },
+  { label: 'WhatsApp', href: 'https://wa.me/918105104135' },
 ]
 
 function Footer() {

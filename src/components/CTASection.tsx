@@ -150,7 +150,9 @@ function CTASection() {
               </p>
               <div style={{ display: 'flex', gap: '1rem' }}>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/kanchan.bymanjulajewellers/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="Instagram"
                   style={{
                     width: '38px',
@@ -170,8 +172,10 @@ function CTASection() {
                     <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
                   </svg>
                 </a>
-                {/* <a
-                  href="#"
+                <a
+                  href="https://www.facebook.com/kanchanjewellerss/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="Facebook"
                   style={{
                     width: '38px',
@@ -188,9 +192,9 @@ function CTASection() {
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="#FAF8F4">
                     <path d="M13.5 21v-7.5h2.5l.5-3h-3V8.5c0-.87.24-1.46 1.5-1.46H16.5V4.36c-.26-.03-1.15-.11-2.19-.11-2.17 0-3.66 1.32-3.66 3.75V10.5H8v3h2.65V21h2.85z" />
                   </svg>
-                </a> */}
+                </a>
                 <a
-                  href="https://wa.me/91 8105104135"
+                  href="https://wa.me/918105104135"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="WhatsApp"
