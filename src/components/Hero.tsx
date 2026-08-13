@@ -5,7 +5,7 @@ import { useReveal } from '@/hooks/useReveal'
 
 // 👉 Drop your 3 product videos here with these exact filenames
 //    (same folder as your existing hero image import).
-import heroVideo1 from '@/imports/products/hero-video-1.MP4'
+import heroVideo1 from '@/imports/products/hero-video-1.mp4'
 import heroVideo2 from '@/imports/products/hero-video-2.MP4'
 import heroVideo3 from '@/imports/products/hero-video-3.MP4'
 
