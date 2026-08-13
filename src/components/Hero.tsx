@@ -6,8 +6,8 @@ import { useReveal } from '@/hooks/useReveal'
 // 👉 Drop your 3 product videos here with these exact filenames
 //    (same folder as your existing hero image import).
 import heroVideo1 from '@/imports/products/hero-video-1.mp4'
-import heroVideo2 from '@/imports/products/hero-video-2.MP4'
-import heroVideo3 from '@/imports/products/hero-video-3.MP4'
+import heroVideo2 from '@/imports/products/hero-video-2.mp4'
+import heroVideo3 from '@/imports/products/hero-video-3.mp4'
 
 const HERO_VIDEOS = [heroVideo1, heroVideo2, heroVideo3]
 const SLIDE_DURATION_MS = 6000 // how long each video shows before crossfading
