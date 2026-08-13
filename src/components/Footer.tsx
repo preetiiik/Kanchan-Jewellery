@@ -251,6 +251,12 @@ function Footer() {
             align-items: flex-start !important;
             gap: 1.25rem !important;
           }
+
+          .footer-bottom-row > div:last-child {
+            flex-wrap: wrap;
+            gap: 1rem !important;
+            font-size: 15px;
+          }
         }
       `}</style>
 

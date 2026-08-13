@@ -238,6 +238,15 @@ function CTASection() {
           .cta-contact-grid > div[style*="width: 1px"] {
             display: none;
           }
+
+          .cta-contact-details li {
+            align-items: flex-start !important;
+          }
+
+          .cta-contact-details a {
+            word-break: break-word !important;
+            overflow-wrap: anywhere !important;
+          }
         }
       `}</style>
     </section>
