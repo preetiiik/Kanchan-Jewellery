@@ -195,7 +195,7 @@ function CollectionShowcase({
               height: '100%',
               objectFit: 'cover',
               display: 'block',
-              minHeight: rows > 2 ? '720px' : '400px',
+              // minHeight: rows > 2 ? '720px' : '400px',
             }}
           />
         </div>

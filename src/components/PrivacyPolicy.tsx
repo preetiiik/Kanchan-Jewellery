@@ -290,7 +290,7 @@ function PrivacyPolicy({ onClose }: PrivacyPolicyProps) {
             <div
               className="privacy-body"
               style={{
-                fontFamily: 'var(--font-body)',
+                fontFamily: 'var(--font-secondary)',
                 fontSize: '16px',
                 lineHeight: 1.8,
                 color: 'rgba(28, 24, 20, 0.7)',

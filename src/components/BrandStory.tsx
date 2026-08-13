@@ -382,8 +382,8 @@ function BrandStory() {
 
         <p
           style={{
-            fontFamily: 'var(--font-body)',
-            fontSize: '16px',
+            fontFamily: 'var(--font-secondary)',
+            fontSize: '14px',
             lineHeight: 1.85,
             color: '#6E6058',
             margin: 0,
@@ -428,8 +428,8 @@ function BrandStory() {
               </p>
               <p
                 style={{
-                  fontFamily: 'var(--font-body)',
-                  fontSize: '15px',
+                  fontFamily: 'var(--font-secondary)',
+                  fontSize: '14px',
                   lineHeight: 1.7,
                   color: '#9A8C7E',
                   margin: 0,

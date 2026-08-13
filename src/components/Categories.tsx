@@ -172,7 +172,7 @@ function CategoryCard({
           <p
             style={{
               fontFamily: 'var(--font-body)',
-              fontSize: '17px',
+              fontSize: '16px',
               letterSpacing: '0.2em',
               textTransform: 'uppercase',
               color: '#B39656',
@@ -183,9 +183,9 @@ function CategoryCard({
           </p>
           <h3
             style={{
-              fontFamily: 'var(--font-display)',
+              fontFamily: 'var(--font-secondary)',
               fontWeight: 300,
-              fontSize: '1.6rem',
+              fontSize: '18px',
               color: '#1C1814',
               margin: 0,
               letterSpacing: '0.02em',
@@ -198,7 +198,7 @@ function CategoryCard({
           href="#CollectionShowcase"
           style={{
             fontFamily: 'var(--font-body)',
-            fontSize: '17px',
+            fontSize: '14px',
             letterSpacing: '0.18em',
             textTransform: 'uppercase',
             color: '#9A8C7E',

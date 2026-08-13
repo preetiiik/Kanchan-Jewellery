@@ -19,7 +19,7 @@
 
 @font-face {
    font-family: 'Makozin';
-  src: url('./assets/fonts/Makozin-Bold.woff2') format('woff2');
+  src: url('./assets/fonts/Makozin-Regular.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -27,7 +27,7 @@
 
 @font-face {
    font-family: 'Makozin';
-  src: url('./assets/fonts/Makozin-Bold.woff2') format('woff2');
+  src: url('./assets/fonts/Makozin-Regular.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -35,7 +35,7 @@
 
 @font-face {
   font-family: 'Makozin';
-  src: url('./assets/fonts/Makozin-Bold.woff2') format('woff2');
+  src: url('./assets/fonts/Makozin-Regular.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -43,7 +43,7 @@
 
 @font-face {
   font-family: 'Makozin';
-  src: url('./assets/fonts/Makozin-Bold.woff2') format('woff2');
+  src: url('./assets/fonts/Makozin-Regular.woff2') format('woff2');
   font-weight: 500;
   font-style: italic;
   font-display: swap;
@@ -52,6 +52,7 @@
 @theme {
   --font-display: 'Cormorant Garamond', Georgia, serif;
   --font-body: 'Cormorant Garamond', Georgia, serif;
+  --font-secondary: 'Makozin', 'Cormorant Garamond', Georgia, serif;
   --color-ivory: #FAF8F4;
   --color-cream: #F0E8DC;
   --color-champagne: #E5D5C0;

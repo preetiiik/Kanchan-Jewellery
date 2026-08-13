@@ -108,8 +108,8 @@ function CTASection() {
               <li style={{ display: 'flex', alignItems: 'center', gap: '0.9rem' }}>
                 <Mail size={16} color="#B39656" strokeWidth={1.5} />
                 <a
-                  href="mailto:hello@yourbrand.com"
-                  style={{ fontFamily: 'var(--font-body)', fontSize: '17px', color: '#FAF8F4', textDecoration: 'none', letterSpacing: '0.02em' }}
+                  href="kanchanjewellersbyadgi@gmail.com"
+                  style={{ fontFamily: 'var(--font-secondary)', fontSize: '16px', color: '#FAF8F4', textDecoration: 'none', letterSpacing: '0.02em' }}
                 >
                   kanchanjewellersbyadgi@gmail.com
                 </a>
@@ -117,15 +117,15 @@ function CTASection() {
               <li style={{ display: 'flex', alignItems: 'center', gap: '0.9rem' }}>
                 <Phone size={16} color="#B39656" strokeWidth={1.5} />
                 <a
-                  href="tel:+910000000000"
-                  style={{ fontFamily: 'var(--font-body)', fontSize: '17px', color: '#FAF8F4', textDecoration: 'none', letterSpacing: '0.02em' }}
+                  href="tel:+918105104135"
+                  style={{ fontFamily: 'var(--font-secondary)', fontSize: '16px', color: '#FAF8F4', textDecoration: 'none', letterSpacing: '0.02em' }}
                 >
                   +91 8105104135
                 </a>
               </li>
               <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.9rem' }}>
                 <MapPin size={16} color="#B39656" strokeWidth={1.5} style={{ marginTop: '2px' }} />
-                <span style={{ fontFamily: 'var(--font-body)', fontSize: '17px', color: '#FAF8F4', letterSpacing: '0.02em' }}>
+                <span style={{ fontFamily: 'var(--font-secondary)', fontSize: '16px', color: '#FAF8F4', letterSpacing: '0.02em' }}>
                   Subhash Circle, Near, Byadgi road, opposite Manjula Jewellers, Byadagi, Karnataka 581106
                 </span>
               </li>

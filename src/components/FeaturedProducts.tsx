@@ -120,7 +120,7 @@ function FeaturedProducts({
           href="#CollectionShowcase"
           style={{
             fontFamily: 'var(--font-body)',
-            fontSize: '16px',
+            fontSize: '14px',
             fontWeight: 500,
             letterSpacing: '0.18em',
             textTransform: 'uppercase',
@@ -246,8 +246,8 @@ function ProductCard({
           </p>
           <p
             style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: '16px',
+              fontFamily: 'var(--font-secondary)',
+              fontSize: '18px',
               fontWeight: 500,
               color: '#1C1814',
               margin: 0,
@@ -257,10 +257,10 @@ function ProductCard({
           </p>
         </div>
         <a
-          href="#"
+          href="#CollectionShowcase"
           style={{
             fontFamily: 'var(--font-body)',
-            fontSize: '16px',
+            fontSize: '14px',
             letterSpacing: '0.15em',
             textTransform: 'uppercase',
             color: '#9A8C7E',
