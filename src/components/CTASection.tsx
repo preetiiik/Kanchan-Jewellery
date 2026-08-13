@@ -124,7 +124,7 @@ function CTASection() {
                 </a>
               </li>
               <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.9rem' }}>
-                <MapPin size={16} color="#B39656" strokeWidth={1.5} style={{ marginTop: '2px' }} />
+                <MapPin size={20} color="#B39656" strokeWidth={1.5} style={{ marginTop: '1px', flexShrink: 0 }} />
                 <span style={{ fontFamily: 'var(--font-secondary)', fontSize: '16px', color: '#FAF8F4', letterSpacing: '0.02em' }}>
                   Subhash Circle, Near, Byadgi road, opposite Manjula Jewellers, Byadagi, Karnataka 581106
                 </span>
