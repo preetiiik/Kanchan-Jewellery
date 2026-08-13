@@ -199,6 +199,7 @@ function CategoryCard({
           style={{
             fontFamily: 'var(--font-body)',
             fontSize: '14px',
+            fontWeight: 500,
             letterSpacing: '0.18em',
             textTransform: 'uppercase',
             color: '#9A8C7E',

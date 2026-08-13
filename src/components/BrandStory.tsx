@@ -123,6 +123,7 @@ function BrandStory() {
       >
         {/* Decorative label — top left */}
         <div
+          className="reel-label"
           style={{
             position: 'absolute',
             top: '7%',
@@ -133,6 +134,7 @@ function BrandStory() {
           }}
         >
           <p
+            className="reel-label-title"
             style={{
               margin: 0,
               fontFamily: 'var(--font-body)',
@@ -145,6 +147,7 @@ function BrandStory() {
             The Kanchan Collection
           </p>
           <div
+            className="reel-label-line"
             style={{
               width: '45px',
               height: '1px',
@@ -687,6 +690,22 @@ function BrandStory() {
 
           .reel-side-label {
             display: none;
+          }
+
+          .reel-label {
+            top: 5% !important;
+            left: auto !important;
+            right: 0%;
+            max-width: 78%;
+          }
+
+          .reel-label-title {
+            text-align: right !important;
+          }
+
+          .reel-label-line {
+            margin-left: auto !important;
+            margin-right: 0 !important;
           }
 
           .brand-story-copy {

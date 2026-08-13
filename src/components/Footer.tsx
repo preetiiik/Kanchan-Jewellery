@@ -142,7 +142,7 @@ function Footer() {
                 key={item.label}
                 href={item.href}
                 style={{
-                  fontFamily: 'var(--font-body)',
+                  fontFamily: 'var(--font-secondary)',
                   fontSize: '17px',
                   color: 'rgba(250, 248, 244, 0.45)',
                   textDecoration: 'none',

@@ -106,7 +106,7 @@ function CTASection() {
             {/* Contact info list */}
             <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: '1.1rem' }}>
               <li style={{ display: 'flex', alignItems: 'center', gap: '0.9rem' }}>
-                <Mail size={16} color="#B39656" strokeWidth={1.5} />
+                <Mail size={18} color="#B39656" strokeWidth={1.5} style={{ flexShrink: 0 }} />
                 <a
                   href="kanchanjewellersbyadgi@gmail.com"
                   style={{ fontFamily: 'var(--font-secondary)', fontSize: '16px', color: '#FAF8F4', textDecoration: 'none', letterSpacing: '0.02em' }}
@@ -115,7 +115,7 @@ function CTASection() {
                 </a>
               </li>
               <li style={{ display: 'flex', alignItems: 'center', gap: '0.9rem' }}>
-                <Phone size={16} color="#B39656" strokeWidth={1.5} />
+                <Phone size={18} color="#B39656" strokeWidth={1.5} style={{ flexShrink: 0 }} />
                 <a
                   href="tel:+918105104135"
                   style={{ fontFamily: 'var(--font-secondary)', fontSize: '16px', color: '#FAF8F4', textDecoration: 'none', letterSpacing: '0.02em' }}
@@ -124,7 +124,7 @@ function CTASection() {
                 </a>
               </li>
               <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.9rem' }}>
-                <MapPin size={20} color="#B39656" strokeWidth={1.5} style={{ marginTop: '1px', flexShrink: 0 }} />
+                <MapPin size={18} color="#B39656" strokeWidth={1.5} style={{ marginTop: '1px', flexShrink: 0 }} />
                 <span style={{ fontFamily: 'var(--font-secondary)', fontSize: '16px', color: '#FAF8F4', letterSpacing: '0.02em' }}>
                   Subhash Circle, Near, Byadgi road, opposite Manjula Jewellers, Byadagi, Karnataka 581106
                 </span>

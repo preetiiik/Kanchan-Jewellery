@@ -83,6 +83,7 @@ function Hero({
 
         {/* Scrim for text legibility — stronger on the right, fades out to the left */}
         <div
+          className="hero-scrim"
           style={{
             position: 'absolute',
             inset: 0,
@@ -236,12 +237,27 @@ function Hero({
             object-position: center !important;
           }
 
+          .hero-scrim {
+            background: linear-gradient(
+              180deg,
+              rgba(20,17,14,0.55) 0%,
+              rgba(20,17,14,0.4) 20%,
+              rgba(20,17,14,0.72) 45%,
+              rgba(20,17,14,0.88) 100%
+            ) !important;
+          }
+
           .hero-copy {
             margin-left: 0 !important;
             max-width: 100% !important;
             text-align: left !important;
             padding: 1.75rem 1.5rem 2.5rem !important;
             align-items: flex-start !important;
+          }
+
+          .hero-copy p,
+          .hero-copy h1 {
+            text-shadow: 0 2px 14px rgba(0, 0, 0, 0.55);
           }
 
           .hero-cta-row,
