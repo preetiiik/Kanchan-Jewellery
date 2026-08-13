@@ -6,9 +6,9 @@ import necklace1 from '@/imports/products/coll-necklace-1.jpg'
 import necklace2 from '@/imports/products/coll-necklace-2.jpg'
 import necklace3 from '@/imports/products/coll-necklace-3.jpg'
 import necklace4 from '@/imports/products/coll-necklace-4.jpg'
-import necklace5 from '@/imports/products/coll-necklace-5.JPG'
-import necklace6 from '@/imports/products/coll-necklace-6.JPG'
-import necklace7 from '@/imports/products/coll-necklace-7.JPG'
+import necklace5 from '@/imports/products/coll-necklace-5.jpg'
+import necklace6 from '@/imports/products/coll-necklace-6.jpg'
+import necklace7 from '@/imports/products/coll-necklace-7.jpg'
 
 // Earrings (3 images)
 import earrings1 from '@/imports/products/coll-earrings-1.jpg'

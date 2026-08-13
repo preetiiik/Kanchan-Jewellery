@@ -2,7 +2,7 @@ import { memo } from 'react'
 import { useReveal } from '@/hooks/useReveal'
 
 import necklaceImg from '@/imports/products/cat-necklace.jpg'
-import earringsImg from '@/imports/products/cat-earrings.JPG'
+import earringsImg from '@/imports/products/cat-earrings.jpg'
 import banglesImg from '@/imports/products/cat-bangles.jpg'
 
 const categories = [

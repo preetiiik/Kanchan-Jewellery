@@ -1,11 +1,11 @@
 import { memo } from 'react'
 import { useReveal } from '@/hooks/useReveal'
-import necklace1 from '@/imports/products/feat-necklace-1.JPG'
+import necklace1 from '@/imports/products/feat-necklace-1.jpg'
 import earring1 from '@/imports/products/feat-earring-1.jpg'
 import bangle1 from '@/imports/products/coll-bangles-1.jpg'
 import necklace2 from '@/imports/products/feat-necklace-2.jpg'
 import bridalSet from '@/imports/products/feat-bridal-set.jpg'
-import earring2 from '@/imports/products/feat-earring-2.JPG'
+import earring2 from '@/imports/products/feat-earring-2.jpg'
 
 const products = [
   {
