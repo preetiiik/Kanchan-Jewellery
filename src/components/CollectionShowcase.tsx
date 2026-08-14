@@ -178,7 +178,7 @@ function CollectionShowcase({
 
       {/* Lead image + up to six images on the right */}
       <div
-        className="showcase-grid"
+        className={`showcase-grid showcase-grid-${activeTab.toLowerCase()}`}
         style={{
           display: 'grid',
           gridTemplateColumns: '2fr 1fr 1fr',
@@ -222,7 +222,7 @@ function CollectionShowcase({
           return (
             <div
               key={i}
-              className="img-zoom"
+              className={`img-zoom${isOddFinalImage ? ' showcase-right-final' : ''}`}
               onMouseEnter={onImageHover}
               onMouseLeave={onImageLeave}
               style={{
@@ -299,6 +299,23 @@ function CollectionShowcase({
 
           .showcase-large-img-el {
             min-height: 320px !important;
+          }
+
+          .showcase-grid-earrings .showcase-large-img,
+          .showcase-grid-bangles .showcase-large-img {
+            grid-column: auto !important;
+            aspect-ratio: 4 / 3;
+          }
+
+          .showcase-grid-earrings .showcase-large-img-el,
+          .showcase-grid-bangles .showcase-large-img-el {
+            min-height: 0 !important;
+          }
+
+          .showcase-grid-earrings .showcase-right-final,
+          .showcase-grid-bangles .showcase-right-final {
+            grid-column: auto !important;
+            aspect-ratio: 4 / 3 !important;
           }
 
           .showcase-remaining-grid {
