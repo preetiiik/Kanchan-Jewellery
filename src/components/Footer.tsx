@@ -9,6 +9,7 @@ const navLinks = [
       { label: 'About', href: '#brandintro' },
       { label: 'Craftsmanship', href: '#craftsmanship' },
       { label: 'Contact', href: '#contact' },
+      { label: 'Privacy Policy', href: '#privacy-policy' },
     ],
   },
   {
@@ -137,24 +138,47 @@ function Footer() {
             >
               {group.group}
             </p>
-            {group.items.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                style={{
-                  fontFamily: 'var(--font-secondary)',
-                  fontSize: '17px',
-                  color: 'rgba(250, 248, 244, 0.45)',
-                  textDecoration: 'none',
-                  letterSpacing: '0.04em',
-                  transition: 'color 0.3s ease',
-                }}
-                onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = 'rgba(250, 248, 244, 0.85)')}
-                onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = 'rgba(250, 248, 244, 0.45)')}
-              >
-                {item.label}
-              </a>
-            ))}
+            {group.items.map((item) =>
+              item.label === 'Privacy Policy' ? (
+                <button
+                  key={item.label}
+                  onClick={() => setPrivacyOpen(true)}
+                  style={{
+                    fontFamily: 'var(--font-secondary)',
+                    fontSize: '17px',
+                    color: 'rgba(250, 248, 244, 0.45)',
+                    background: 'none',
+                    border: 'none',
+                    padding: 0,
+                    textAlign: 'left',
+                    letterSpacing: '0.04em',
+                    cursor: 'pointer',
+                    transition: 'color 0.3s ease',
+                  }}
+                  onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = 'rgba(250, 248, 244, 0.85)')}
+                  onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = 'rgba(250, 248, 244, 0.45)')}
+                >
+                  {item.label}
+                </button>
+              ) : (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  style={{
+                    fontFamily: 'var(--font-secondary)',
+                    fontSize: '17px',
+                    color: 'rgba(250, 248, 244, 0.45)',
+                    textDecoration: 'none',
+                    letterSpacing: '0.04em',
+                    transition: 'color 0.3s ease',
+                  }}
+                  onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = 'rgba(250, 248, 244, 0.85)')}
+                  onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = 'rgba(250, 248, 244, 0.45)')}
+                >
+                  {item.label}
+                </a>
+              ),
+            )}
           </div>
         ))}
       </div>
@@ -186,24 +210,27 @@ function Footer() {
             © {new Date().getFullYear()} Kanchan Jewellery. All rights reserved.
           </p>
           <span style={{ color: 'rgba(250, 248, 244, 0.15)', fontSize: '16px' }}>|</span>
-          <button
-            onClick={() => setPrivacyOpen(true)}
+          <p
             style={{
               fontFamily: 'var(--font-body)',
               fontSize: '16px',
-              letterSpacing: '0.06em',
               color: 'rgba(250, 248, 244, 0.25)',
-              background: 'none',
-              border: 'none',
-              padding: 0,
-              cursor: 'pointer',
-              transition: 'color 0.3s ease',
+              margin: 0,
+              letterSpacing: '0.06em',
             }}
-            onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = '#B39656')}
-            onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = 'rgba(250, 248, 244, 0.25)')}
           >
-            Privacy Policy
-          </button>
+            Powered By{' '}
+            <a
+              href="https://spitel.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.3s ease' }}
+              onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = '#B39656')}
+              onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = 'rgba(250, 248, 244, 0.25)')}
+            >
+              Spitel Pvt. Ltd
+            </a>
+          </p>
         </div>
         <div style={{ display: 'flex', gap: '1.5rem' }}>
           {socialLinks.map((social) => (

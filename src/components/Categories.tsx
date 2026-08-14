@@ -205,8 +205,9 @@ function CategoryCard({
             color: '#9A8C7E',
             textDecoration: 'none',
             borderBottom: '1px solid #DDD0C0',
-            paddingBottom: '2px',
+            paddingBottom: '3px',
             transition: 'color 0.3s ease, border-color 0.3s ease',
+            whiteSpace: 'nowrap',
           }}
           onMouseEnter={(e) => {
             const el = e.currentTarget as HTMLElement

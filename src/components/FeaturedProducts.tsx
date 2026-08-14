@@ -128,11 +128,19 @@ function FeaturedProducts({
             textDecoration: 'none',
             borderBottom: '1px solid #DDD0C0',
             paddingBottom: '3px',
-            transition: 'color 0.3s ease',
+            transition: 'color 0.3s ease, border-color 0.3s ease',
             whiteSpace: 'nowrap',
           }}
-          onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = '#B39656')}
-          onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = '#9A8C7E')}
+          onMouseEnter={(e) => {
+            const el = e.currentTarget as HTMLElement
+            el.style.color = '#B39656'
+            el.style.borderColor = '#B39656'
+          }}
+          onMouseLeave={(e) => {
+            const el = e.currentTarget as HTMLElement
+            el.style.color = '#9A8C7E'
+            el.style.borderColor = '#DDD0C0'
+          }}
         >
           View All Pieces
         </a>
