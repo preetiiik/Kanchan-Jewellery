@@ -73,6 +73,7 @@ export default function BrandIntro() {
           src={boxImg}
           alt="Kanchan red jewellery box with gold bangle"
           title="The House of Kanchan"
+          subtitle="A Unit by Manjula Jewellers"
           scrollHint="Scroll to reveal"
           useWindowScroll
           startWidth={42}
@@ -100,9 +101,9 @@ export default function BrandIntro() {
           <div className="ka-rule" />
 
           <p className="ka-content-body">
-            Kanchan Jewellery is a celebration of timeless Indian craftsmanship —
-            where every piece is conceived with intention, shaped with patience,
-            and created to be treasured across generations.
+            Kanchan Jewellery — A Unit by Manjula Jewellers, is a celebration of
+            timeless Indian craftsmanship where every piece is conceived with
+            intention, shaped with patience, and created to be treasured across generations.
           </p>
         </ScrollExpand>
       </section>

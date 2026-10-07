@@ -1,4 +1,5 @@
 import { memo, useState } from 'react'
+import kanchanLogoWhite from '@/imports/kanchan-logo-white.png'
 import PrivacyPolicy from './PrivacyPolicy'
 
 const navLinks = [
@@ -63,30 +64,33 @@ function Footer() {
       >
         {/* Brand */}
         <div className="footer-brand" style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-          <div>
-            <p
-              style={{
-                fontFamily: 'var(--font-display)',
-                fontWeight: 300,
-                fontSize: 'clamp(1.4rem, 3vw, 2.2rem)',
-                color: '#B39656',
-                margin: '0 0 4px 0',
-                letterSpacing: '0.08em',
-              }}
-            >
-              KÄNCHAN
-            </p>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '0.8rem' }}>
+            <a href="/" aria-label="Kanchan Jewellery home">
+              <img
+                src={kanchanLogoWhite}
+                alt="Kanchan Jewellery"
+                style={{
+                  width: 'clamp(120px, 16vw, 170px)',
+                  height: 'auto',
+                  objectFit: 'contain',
+                  display: 'block',
+                }}
+              />
+            </a>
             <p
               style={{
                 fontFamily: 'var(--font-body)',
-                fontSize: '14px',
-                letterSpacing: '0.28em',
+                fontSize: '15px',
+                letterSpacing: '0.22em',
                 textTransform: 'uppercase',
-                color: 'rgba(250, 248, 244, 0.35)',
+                color: '#E7D9BF',
                 margin: 0,
+                lineHeight: 1.7,
               }}
             >
-              By Manjula Jewellers
+              Jewels Crafted
+              <br />
+              For Generations
             </p>
           </div>
 
@@ -103,9 +107,7 @@ function Footer() {
               lineHeight: 1.6,
             }}
           >
-            Jewels Crafted
-            <br />
-            For Generations
+            A Unit by Manjula Jewellers
           </p>
 
           <p
@@ -202,19 +204,21 @@ function Footer() {
             style={{
               fontFamily: 'var(--font-body)',
               fontSize: '16px',
-              color: 'rgba(250, 248, 244, 0.25)',
+              fontWeight: 600,
+              color: 'rgba(250, 248, 244, 0.65)',
               margin: 0,
               letterSpacing: '0.06em',
             }}
           >
-            © {new Date().getFullYear()} Kanchan Jewellery. All rights reserved.
+            © {new Date().getFullYear()} Kanchan Jewellery — A Unit by Manjula Jewellers. All Rights Reserved.
           </p>
           <span style={{ color: 'rgba(250, 248, 244, 0.15)', fontSize: '16px' }}>|</span>
           <p
             style={{
               fontFamily: 'var(--font-body)',
               fontSize: '16px',
-              color: 'rgba(250, 248, 244, 0.25)',
+              fontWeight: 600,
+              color: 'rgba(250, 248, 244, 0.65)',
               margin: 0,
               letterSpacing: '0.06em',
             }}
@@ -226,7 +230,7 @@ function Footer() {
               rel="noopener noreferrer"
               style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.3s ease' }}
               onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = '#B39656')}
-              onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = 'rgba(250, 248, 244, 0.25)')}
+              onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = 'rgba(250, 248, 244, 0.65)')}
             >
               Spitel Pvt. Ltd
             </a>
@@ -241,10 +245,11 @@ function Footer() {
               rel="noopener noreferrer"
               style={{
                 fontFamily: 'var(--font-body)',
-                fontSize: '17px',
+                fontSize: '12px',
+                fontWeight: 600,
                 letterSpacing: '0.15em',
                 textTransform: 'uppercase',
-                color: 'rgba(250, 248, 244, 0.25)',
+                color: 'rgba(250, 248, 244, 0.65)',
                 textDecoration: 'none',
                 transition: 'color 0.3s ease',
               }}

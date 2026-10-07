@@ -135,8 +135,45 @@ function EditorialSection() {
 
   useEffect(() => {
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    if (!reduceMotion) startCycle()
+    const isMobile = window.matchMedia('(max-width: 767px)').matches
+    if (!isMobile) {
+      if (!reduceMotion) startCycle()
+      return () => {
+        if (intervalRef.current) clearInterval(intervalRef.current)
+      }
+    }
+
+    const revealTargets = [leftRef.current, rightRef.current].filter(
+      (target): target is HTMLDivElement => target !== null
+    )
+    const updateMobileSection = () => {
+      revealTargets.forEach((target) => {
+        const rect = target.getBoundingClientRect()
+        if (rect.bottom > 0 && rect.top < window.innerHeight) {
+          target.classList.add('revealed')
+        }
+      })
+
+      const fan = rightRef.current
+      if (!fan || reduceMotion) return
+      const rect = fan.getBoundingClientRect()
+      const isVisible = rect.bottom > 0 && rect.top < window.innerHeight
+
+      if (isVisible && !intervalRef.current) {
+        startCycle()
+      } else if (!isVisible && intervalRef.current) {
+        clearInterval(intervalRef.current)
+        intervalRef.current = null
+      }
+    }
+
+    window.addEventListener('scroll', updateMobileSection, { passive: true })
+    window.addEventListener('resize', updateMobileSection)
+    updateMobileSection()
+
     return () => {
+      window.removeEventListener('scroll', updateMobileSection)
+      window.removeEventListener('resize', updateMobileSection)
       if (intervalRef.current) clearInterval(intervalRef.current)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -144,6 +181,7 @@ function EditorialSection() {
 
   return (
     <section
+      className="editorial-section"
       style={{
         background: '#0F0D0B',
         padding: 'clamp(5rem, 12vw, 10rem) clamp(1.5rem, 6vw, 6rem)',
@@ -336,7 +374,7 @@ function EditorialSection() {
       {/* Right — semicircle fan of photo wedges */}
       <div
         ref={rightRef}
-        className="reveal-right"
+        className="reveal-right editorial-fan"
         style={{
           position: 'relative',
           width: '100%',
@@ -401,8 +439,29 @@ function EditorialSection() {
       {/* Mobile stack */}
       <style>{`
         @media (max-width: 767px) {
-          section[style*="0F0D0B"] {
+          .editorial-section {
             grid-template-columns: 1fr !important;
+          }
+
+          .editorial-section .reveal-left.revealed,
+          .editorial-section .reveal-right.revealed {
+            animation: editorialMobileReveal 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
+          }
+
+          .editorial-section .editorial-fan {
+            max-width: 360px !important;
+            justify-self: center !important;
+          }
+
+          @keyframes editorialMobileReveal {
+            from {
+              opacity: 0;
+              transform: translateY(24px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
           }
         }
       `}</style>

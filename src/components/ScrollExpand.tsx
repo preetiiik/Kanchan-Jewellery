@@ -4,6 +4,7 @@ interface ScrollExpandProps {
   src: string
   alt?: string
   title?: string
+  subtitle?: string
   scrollHint?: string
   useWindowScroll?: boolean
   children?: ReactNode
@@ -25,6 +26,7 @@ export default function ScrollExpand({
   src,
   alt = '',
   title,
+  subtitle,
   scrollHint,
   useWindowScroll: useWin = false,
   children,
@@ -45,7 +47,7 @@ export default function ScrollExpand({
   const scrimRef    = useRef<HTMLDivElement>(null)
   const contentRef  = useRef<HTMLDivElement>(null)
   const hintRef     = useRef<HTMLParagraphElement>(null)
-  const titleRef = useRef<HTMLParagraphElement>(null)
+  const titleRef = useRef<HTMLDivElement>(null)
 
   // Smoothed current values
   const cur = useRef({ w: startWidth, h: startHeight, r: startRadius, scrim: 0, content: 0 })
@@ -147,22 +149,37 @@ export default function ScrollExpand({
 
         {/* Optional top label */}
         {title && (
-          <p 
+          <div
           ref={titleRef}
           style={{
             position: 'absolute',
             top: '2.2rem',
             left: '50%',
             transform: 'translateX(-50%)',
-            margin: 0,
-            fontFamily: 'inherit',
-            fontSize: '18px',
-            letterSpacing: '0.28em',
-            textTransform: 'uppercase',
-            color: '#B39656',
             zIndex: 10,
+            textAlign: 'center',
             whiteSpace: 'nowrap',
-          }}>{title}</p>
+          }}>
+            <p style={{
+              margin: 0,
+              fontFamily: 'inherit',
+              fontSize: '18px',
+              letterSpacing: '0.28em',
+              textTransform: 'uppercase',
+              color: '#B39656',
+            }}>{title}</p>
+            {subtitle && (
+              <p style={{
+                margin: '0.45rem 0 0',
+                fontFamily: 'var(--font-body)',
+                fontSize: '12px',
+                fontWeight: 700,
+                letterSpacing: '0.16em',
+                textTransform: 'uppercase',
+                color: 'rgba(179, 150, 86, 0.8)',
+              }}>{subtitle}</p>
+            )}
+          </div>
         )}
 
         {/* The expanding frame */}

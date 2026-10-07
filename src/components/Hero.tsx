@@ -126,6 +126,22 @@ function Hero({
           Kanchan Jewellery
         </p>
 
+        <p
+          className="hero-in"
+          style={{
+            fontFamily: 'var(--font-secondary)',
+            fontSize: '13px',
+            letterSpacing: '0.2em',
+            textTransform: 'uppercase',
+            color: '#F1E6D4',
+            margin: '-0.35rem 0 0',
+            opacity: 0.9,
+            animationDelay: '0.12s',
+          }}
+        >
+          A unit by Manjula Jewellers
+        </p>
+
         <h1
           className="hero-in"
           style={{

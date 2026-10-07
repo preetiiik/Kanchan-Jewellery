@@ -95,6 +95,20 @@ function CTASection() {
             <em style={{ fontStyle: 'italic', color: '#B39656' }}>Perfect Piece</em>
           </h3>
 
+          <p
+            style={{
+              fontFamily: 'var(--font-body)',
+              fontSize: '15px',
+              fontStyle: 'italic',
+              letterSpacing: '0.14em',
+              textTransform: 'uppercase',
+              color: 'rgba(231, 217, 191, 0.75)',
+              margin: '-1.25rem 0 0',
+            }}
+          >
+            A Unit by Manjula Jewellers
+          </p>
+
           <div
             className="cta-contact-grid"
             style={{
