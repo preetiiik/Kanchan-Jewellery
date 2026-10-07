@@ -158,6 +158,35 @@ export default function Navbar() {
             />
           </svg>
         </button>
+
+        {scrolled && (
+          <div
+            className="navbar-affiliation-strip"
+            style={{
+              position: 'absolute',
+              top: '100%',
+              left: 0,
+              right: 0,
+              minHeight: '28px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              background: 'rgba(28, 24, 20, 0.92)',
+              borderTop: '1px solid rgba(201, 173, 112, 0.55)',
+              color: '#F1E6D4',
+              fontFamily: 'var(--font-body)',
+              fontSize: '12px',
+              fontWeight: 600,
+              letterSpacing: '0.2em',
+              textTransform: 'uppercase',
+              textShadow: '0 1px 4px rgba(0, 0, 0, 0.45)',
+              textAlign: 'center',
+              padding: '4px 12px',
+            }}
+          >
+            A unit by Manjula Jewellers
+          </div>
+        )}
       </header>
 
       {/* Mobile menu */}
@@ -214,11 +243,11 @@ export default function Navbar() {
           display: none;
         }
 
-        @media (max-width: 767px) {
+        @media (max-width: 1100px) {
           .site-header {
             justify-content: space-between !important;
-            padding-left: 1.5rem !important;
-            height: 148px !important;
+            padding: 0 1.5rem !important;
+            height: 104px !important;
           }
           .navbar-desktop-nav {
             display: none !important;
@@ -231,12 +260,23 @@ export default function Navbar() {
             margin-top: 0.4rem;
           }
           .navbar-logo img {
-            height: 88px !important;
+            height: 76px !important;
           }
           .navbar-hamburger {
             display: flex !important;
             align-items: center;
             justify-content: center;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .site-header {
+            padding: 0 1rem !important;
+            height: 88px !important;
+          }
+
+          .navbar-logo img {
+            height: 68px !important;
           }
         }
       `}</style>

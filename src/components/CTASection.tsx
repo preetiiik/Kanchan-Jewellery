@@ -235,7 +235,7 @@ function CTASection() {
       </div>
 
       <style>{`
-        @media (max-width: 780px) {
+        @media (max-width: 980px) {
           .cta-contact-block {
             flex-direction: column;
           }

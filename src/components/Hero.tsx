@@ -103,9 +103,10 @@ function Hero({
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
-          gap: '2rem',
-          padding: 'clamp(2.5rem, 6vw, 6rem)',
-          maxWidth: '640px',
+          gap: 'clamp(1.25rem, 2vw, 2rem)',
+          padding: 'clamp(2rem, 5vw, 5rem)',
+          width: '100%',
+          maxWidth: 'min(800px, 56vw)',
           marginLeft: 'auto',
           alignSelf: 'center',
           textAlign: 'right',
@@ -147,16 +148,21 @@ function Hero({
           style={{
             fontFamily: 'var(--font-display)',
             fontWeight: 200,
-            fontSize: 'clamp(2.6rem, 6.5vw, 5.5rem)',
+            fontSize: 'clamp(2.6rem, 5.8vw, 5.25rem)',
             lineHeight: 1.02,
             color: '#FAF8F4',
             margin: 0,
             letterSpacing: '-0.01em',
-            maxWidth: '620px',
+            width: '100%',
+            maxWidth: 'none',
+            textWrap: 'balance',
             animationDelay: '0.18s',
           }}
         >
-          Jewels Crafted <em style={{ fontStyle: 'italic', color: '#C9AD70' }}>For Generations</em>
+          Jewels Crafted{' '}
+          <em className="hero-generation-phrase" style={{ fontStyle: 'italic', color: '#C9AD70' }}>
+            For Generations
+          </em>
         </h1>
 
         <p
@@ -271,9 +277,19 @@ function Hero({
             align-items: flex-start !important;
           }
 
+          .hero-generation-phrase {
+            white-space: normal;
+          }
+
           .hero-copy p,
           .hero-copy h1 {
             text-shadow: 0 2px 14px rgba(0, 0, 0, 0.55);
+          }
+
+          @media (min-width: 1200px) {
+            .hero-generation-phrase {
+              white-space: nowrap;
+            }
           }
 
           .hero-cta-row,

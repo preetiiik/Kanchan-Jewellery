@@ -328,11 +328,15 @@ function CollectionShowcase({
 
           .showcase-tabs {
             width: 100%;
+            display: grid !important;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
           }
 
           .showcase-tab-btn {
-            padding: 0.5rem 1rem !important;
-            font-size: 13px !important;
+            min-width: 0;
+            padding: 0.5rem 0.35rem !important;
+            font-size: 12px !important;
+            letter-spacing: 0.1em !important;
           }
         }
 

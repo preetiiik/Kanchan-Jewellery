@@ -323,7 +323,7 @@ function BrandStory() {
       ═══════════════════════════════════════════════════════════════════ */}
       <div
         ref={leftRef}
-        className="brand-story-copy"
+        className={`brand-story-copy${revealed ? ' is-revealed' : ''}`}
         style={{
           display: 'flex',
           flexDirection: 'column',
@@ -666,8 +666,27 @@ function BrandStory() {
         /* ── Mobile ── */
         @media (max-width: 767px) {
           .brand-story-section {
-            grid-template-columns: 1fr !important;
+            grid-template-columns: minmax(0, 1fr) !important;
+            column-gap: 0 !important;
             padding: clamp(3.5rem, 12vw, 5rem) 1.5rem !important;
+          }
+
+          .brand-story-section > .film-reel-wrapper,
+          .brand-story-section > .brand-story-copy {
+            grid-column: 1 !important;
+            width: 100% !important;
+            min-width: 0 !important;
+          }
+
+          .brand-story-copy {
+            opacity: 0 !important;
+            transform: translateY(24px) !important;
+            transition: opacity 0.9s ease, transform 0.9s ease !important;
+          }
+
+          .brand-story-copy.is-revealed {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
           }
 
           .film-reel-wrapper {
