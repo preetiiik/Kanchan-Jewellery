@@ -166,7 +166,7 @@ function Hero({
         </h1>
 
         <p
-          className="hero-in"
+          className="hero-in hero-description"
           style={{
             fontFamily: 'var(--font-body)',
             fontSize: 'clamp(18px, 1.4vw, 15px)',
@@ -254,6 +254,10 @@ function Hero({
           animation: heroFadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
         }
 
+        .hero-description {
+          align-self: flex-end;
+        }
+
         @media (max-width: 767px) {
           .hero-video {
             object-position: center !important;
@@ -279,6 +283,11 @@ function Hero({
 
           .hero-generation-phrase {
             white-space: normal;
+          }
+
+          .hero-description {
+            align-self: flex-start;
+            text-align: left;
           }
 
           .hero-copy p,
