@@ -101,9 +101,11 @@ export default function BrandIntro() {
           <div className="ka-rule" />
 
           <p className="ka-content-body">
-            Kanchan Jewellery — A Unit by Manjula Jewellers, is a celebration of
-            timeless Indian craftsmanship where every piece is conceived with
-            intention, shaped with patience, and created to be treasured across generations.
+            Kanchan Jewellery —{' '}
+            <strong style={{ fontSize: '1.15em' }}>A Unit by Manjula Jewellers</strong>, is a
+            celebration of timeless Indian craftsmanship where every piece is
+            conceived with intention, shaped with patience, and created to be
+            treasured across generations.
           </p>
         </ScrollExpand>
       </section>

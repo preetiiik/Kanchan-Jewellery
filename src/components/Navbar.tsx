@@ -176,7 +176,7 @@ export default function Navbar() {
               color: '#F1E6D4',
               fontFamily: 'var(--font-body)',
               fontSize: '12px',
-              fontWeight: 600,
+              fontWeight: 700,
               letterSpacing: '0.2em',
               textTransform: 'uppercase',
               textShadow: '0 1px 4px rgba(0, 0, 0, 0.45)',

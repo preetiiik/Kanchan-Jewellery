@@ -172,11 +172,11 @@ export default function ScrollExpand({
               <p style={{
                 margin: '0.45rem 0 0',
                 fontFamily: 'var(--font-body)',
-                fontSize: '12px',
-                fontWeight: 700,
-                letterSpacing: '0.16em',
+                fontSize: '16px',
+                fontWeight: 800,
+                letterSpacing: '0.14em',
                 textTransform: 'uppercase',
-                color: 'rgba(179, 150, 86, 0.8)',
+                color: '#D2B775',
               }}>{subtitle}</p>
             )}
           </div>

@@ -1,4 +1,5 @@
 import { memo } from 'react'
+import kanchanLogo from '@/imports/kanchan-logo.png'
 
 type PrivacyPolicyProps = {
   onClose: () => void
@@ -225,17 +226,28 @@ function PrivacyPolicy({ onClose }: PrivacyPolicyProps) {
       >
         {/* Header */}
         <div style={{ marginBottom: '3rem', textAlign: 'center' }}>
+          <img
+            src={kanchanLogo}
+            alt="Kanchan Jewellery"
+            style={{
+              display: 'block',
+              width: 'clamp(110px, 20vw, 160px)',
+              height: 'auto',
+              margin: '0 auto 0.5rem',
+            }}
+          />
           <p
             style={{
               fontFamily: 'var(--font-body)',
               fontSize: '16px',
-              letterSpacing: '0.28em',
+              fontWeight: 700,
+              letterSpacing: '0.14em',
               textTransform: 'uppercase',
               color: '#B39656',
               margin: '0 0 0.75rem',
             }}
           >
-            Känchan
+            A Unit by Manjula Jewellers
           </p>
           <h1
             style={{
@@ -263,9 +275,10 @@ function PrivacyPolicy({ onClose }: PrivacyPolicyProps) {
             marginBottom: '3rem',
           }}
         >
-          At <strong>Kanchan Jewellery</strong>, we respect your privacy and are committed to protecting the
-          personal information you share with us. This Privacy Policy explains how we collect, use, store, and
-          protect your information when you visit our website, contact us, or use our services.
+          At <strong>Kanchan Jewellery — A Unit by Manjula Jewellers</strong>, we respect your privacy and are
+          committed to protecting the personal information you share with us. This Privacy Policy explains how we
+          collect, use, store, and protect your information when you visit our website, contact us, or use our
+          services.
           <br />
           <br />
           By using the Kanchan Jewellery website, you acknowledge that you have read and understood this Privacy
@@ -309,12 +322,13 @@ function PrivacyPolicy({ onClose }: PrivacyPolicyProps) {
             fontFamily: 'var(--font-body)',
             fontSize: '16px',
             letterSpacing: '0.06em',
-            color: 'rgba(28, 24, 20, 0.35)',
+            color: 'rgba(28, 24, 20, 0.6)',
             textAlign: 'center',
             margin: 0,
           }}
         >
-          © {new Date().getFullYear()} Kanchan Jewellery. All Rights Reserved.
+          © {new Date().getFullYear()} Kanchan Jewellery —{' '}
+          <strong>A Unit by Manjula Jewellers</strong>. All Rights Reserved.
         </p>
       </div>
 

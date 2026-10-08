@@ -77,21 +77,6 @@ function Footer() {
                 }}
               />
             </a>
-            <p
-              style={{
-                fontFamily: 'var(--font-body)',
-                fontSize: '15px',
-                letterSpacing: '0.22em',
-                textTransform: 'uppercase',
-                color: '#E7D9BF',
-                margin: 0,
-                lineHeight: 1.7,
-              }}
-            >
-              Jewels Crafted
-              <br />
-              For Generations
-            </p>
           </div>
 
           <div style={{ height: '1px', width: '40px', background: 'rgba(179, 150, 86, 0.4)' }} />
@@ -100,9 +85,10 @@ function Footer() {
             style={{
               fontFamily: 'var(--font-body)',
               fontSize: '16px',
-              letterSpacing: '0.18em',
+              fontWeight: 700,
+              letterSpacing: '0.12em',
               textTransform: 'uppercase',
-              color: 'rgba(250, 248, 244, 0.4)',
+              color: 'rgba(250, 248, 244, 0.8)',
               margin: 0,
               lineHeight: 1.6,
             }}
@@ -131,7 +117,7 @@ function Footer() {
             <p
               style={{
                 fontFamily: 'var(--font-body)',
-                fontSize: '17px',
+                fontSize: '13px',
                 letterSpacing: '0.2em',
                 textTransform: 'uppercase',
                 color: '#B39656',
@@ -147,7 +133,7 @@ function Footer() {
                   onClick={() => setPrivacyOpen(true)}
                   style={{
                     fontFamily: 'var(--font-secondary)',
-                    fontSize: '17px',
+                    fontSize: '14px',
                     color: 'rgba(250, 248, 244, 0.45)',
                     background: 'none',
                     border: 'none',
@@ -168,7 +154,7 @@ function Footer() {
                   href={item.href}
                   style={{
                     fontFamily: 'var(--font-secondary)',
-                    fontSize: '17px',
+                    fontSize: '14px',
                     color: 'rgba(250, 248, 244, 0.45)',
                     textDecoration: 'none',
                     letterSpacing: '0.04em',
@@ -210,7 +196,8 @@ function Footer() {
               letterSpacing: '0.06em',
             }}
           >
-            © {new Date().getFullYear()} Kanchan Jewellery — A Unit by Manjula Jewellers. All Rights Reserved.
+            © {new Date().getFullYear()} Kanchan Jewellery —{' '}
+            <strong>A Unit by Manjula Jewellers</strong>. All Rights Reserved.
           </p>
           <span style={{ color: 'rgba(250, 248, 244, 0.15)', fontSize: '16px' }}>|</span>
           <p

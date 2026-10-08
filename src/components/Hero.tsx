@@ -132,6 +132,7 @@ function Hero({
           style={{
             fontFamily: 'var(--font-secondary)',
             fontSize: '13px',
+            fontWeight: 700,
             letterSpacing: '0.2em',
             textTransform: 'uppercase',
             color: '#F1E6D4',

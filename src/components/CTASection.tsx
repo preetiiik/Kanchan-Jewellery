@@ -100,9 +100,10 @@ function CTASection() {
               fontFamily: 'var(--font-body)',
               fontSize: '15px',
               fontStyle: 'italic',
+              fontWeight: 700,
               letterSpacing: '0.14em',
               textTransform: 'uppercase',
-              color: 'rgba(231, 217, 191, 0.75)',
+              color: '#D2B775',
               margin: '-1.25rem 0 0',
             }}
           >
