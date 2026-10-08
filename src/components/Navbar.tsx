@@ -184,7 +184,7 @@ export default function Navbar() {
               padding: '4px 12px',
             }}
           >
-            A unit by Manjula Jewellers
+            Kanchan — A Unit by Manjula Jewellers
           </div>
         )}
       </header>

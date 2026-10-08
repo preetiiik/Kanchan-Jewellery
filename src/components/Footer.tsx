@@ -196,7 +196,7 @@ function Footer() {
               letterSpacing: '0.06em',
             }}
           >
-            © {new Date().getFullYear()} Kanchan Jewellery —{' '}
+            © {new Date().getFullYear()} Kanchan —{' '}
             <strong>A Unit by Manjula Jewellers</strong>. All Rights Reserved.
           </p>
           <span style={{ color: 'rgba(250, 248, 244, 0.15)', fontSize: '16px' }}>|</span>

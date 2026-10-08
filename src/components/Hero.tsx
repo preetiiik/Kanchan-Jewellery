@@ -124,7 +124,7 @@ function Hero({
             animationDelay: '0.05s',
           }}
         >
-          Kanchan Jewellery
+          Kanchan
         </p>
 
         <p
